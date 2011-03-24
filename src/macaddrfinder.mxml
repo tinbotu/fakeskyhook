@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" minWidth="955" minHeight="600" width="501" height="204"
+	initialize="macaddrfinder_()"
+	>
+	<mx:Script source="fakeskyhook.as" />
+
+	<mx:Label x="10" y="12" text="Wifi AP MAC Address to locate" id="label1" width="176"/>
+	<mx:TextInput x="180" y="10" id="macaddr" editable="true" enabled="true" text="" maxChars="18" change="macaddr_changeHandler(event)" textInput="macaddr_changeHandler(event)" enter="buildRequest();" width="154"/>
+	<mx:Button x="348" y="12" label="find" id="execute" click="execute_clickHandler(event)" buttonDown="buildRequest()" enabled="false" height="22" width="54"/>
+	<mx:Button x="405" y="12" label="cancel" id="cancel" enabled="false" click="cancel_clickHandler(event)" width="54" height="22"/>
+	<mx:Label x="10" y="35" id="status" enabled="true" />
+	<mx:CheckBox x="276" y="37" label="using proxy for workaround xdomain" id="useproxy" click="useproxy_clickHandler(event)" selected="true"/>
+	<mx:TextArea x="10" y="83" width="481" height="110" wordWrap="true" editable="false" id="messages" enabled="true"/>
+	<mx:Label x="10" y="60" enabled="true" id="qth" selectable="true" />
+</mx:Application>
